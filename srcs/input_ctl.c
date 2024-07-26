@@ -13,23 +13,22 @@ void    check_dup(int *buf, int num, int size)
     }
 }
 
-t_args *input_ctl(int argc, char **argv)
+t_psargs *input_ctl(int argc, char **argv)
 {
-    t_args  *data;
+    t_psargs  *data;
     int     index;
-    int     size;
     int     num;
     int     i;
 
-    data = (t_args *)malloc(sizeof(t_args));
+    data = (t_psargs *)malloc(sizeof(t_psargs));
     if (!data)
         exit(ft_error());
-    size = argc - 1;
-    data->buf = (int *)malloc(sizeof(int) * (size));
+    data->size = argc - 1;
+    data->buf = (int *)malloc(sizeof(int) * (data->size));
     if (!data->buf)
         exit(ft_error());
     index = 0;
-    while (index < size)
+    while (index < data->size)
     {
         num = ft_atoi(argv[index + 1]);
         check_dup(data->buf, num, index);
