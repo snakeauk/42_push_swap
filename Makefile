@@ -14,7 +14,6 @@ OBJS = $(SRCS:.c=.o)
 
 INCLUDES = ./includes
 
-
 RESET = \033[0m
 BOLD = \033[1m
 DIM = \033[2m
