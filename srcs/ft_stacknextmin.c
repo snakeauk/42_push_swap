@@ -9,7 +9,7 @@ int ft_stacknextmin(t_stack *stack, int min)
     next_min = ft_stackmax(stack);
     while (next->sentinel != 1)
     {
-        if (next->content > min && next->content < next_min)
+        if (next->content < next_min && next->content > min)
             next_min = next->content;
         next = next->next;
     }
