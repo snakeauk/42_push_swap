@@ -1,6 +1,6 @@
 #include "push_swap.h"
 
-t_stack *ft_stackinput(t_args *data)
+t_stack *ft_stackinput(t_psargs *data)
 {
     t_stack *stack;
     t_stack *new;
@@ -14,7 +14,7 @@ t_stack *ft_stackinput(t_args *data)
         ft_stackadd_back(stack, new);
         index++;
     }
-    return (stack);
+    return (ft_stackcompress(new));
 }
 // int main(int argc, char **argv)
 // {
